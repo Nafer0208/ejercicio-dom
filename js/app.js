@@ -18,6 +18,9 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 event.preventDefault()
                 agregrarTarea(tareas, formulario)
+                
+                form.classList.remove('was-validated')
+                formulario.reset()
             }
 
             form.classList.add('was-validated')
@@ -26,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 })
 
-function agregrarTarea(tareas, formulario) {
+function agregrarTarea(tareas) {
     const nombre = document.getElementById('nombre-tarea')
     const valorNombre = nombre.value
     const tr = document.createElement('tr')
@@ -41,5 +44,4 @@ function agregrarTarea(tareas, formulario) {
         </td>`
 
     tareas.appendChild(tr);
-    formulario.reset()
 }
