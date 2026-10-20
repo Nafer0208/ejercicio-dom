@@ -18,9 +18,9 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 event.preventDefault()
                 agregrarTarea(tareas, formulario)
-                
                 form.classList.remove('was-validated')
                 formulario.reset()
+                return
             }
 
             form.classList.add('was-validated')
